@@ -1,0 +1,5 @@
+---
+server:
+  hosts:
+    master.dev.dataport.intranet:
+    backup.dev.dataport.intranet:

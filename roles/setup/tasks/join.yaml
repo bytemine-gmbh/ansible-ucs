@@ -1,0 +1,24 @@
+---
+- name: create profile for join
+  template:
+     src: "templates/profile.j2"
+     dest: "/var/cache/univention-system-setup/profile"
+  tags: join
+
+- name: copy password in file
+  copy: 
+    content: "{{ rootpassword }}"
+    dest: "/tmp/univention"
+  tags: join
+
+- name: run join script on master
+  shell: "/usr/lib/univention-system-setup/scripts/setup-join.sh"
+  when: serverrole == "domaincontroller_master"
+  tags: join
+
+- name: join backup to domain
+  shell: "/usr/lib/univention-system-setup/scripts/setup-join.sh --dcname {{ dc_fqdn }} --dcaccount {{ dc_account }} --password_file /tmp/univention"
+  when: serverrole == "domaincontroller_backup"
+  tags: join
+
+

@@ -1,0 +1,25 @@
+---
+hostname: []
+domainname: "dev.dataport.intranet"
+basedn: "dc=dataport,dc=intranet"
+rootpassword: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          30616462613438313931353863396364303731366135613831646565616333303831636166346464
+          6665356365373231356432333130396335346230646333620a383764646638333261383333623339
+          66666632373230616430343635666533363164326364366531393139333561653933333266643039
+          6438616534393939380a316130346461613165303032623331356531393366386434396634383335
+          3763
+ou: "dataport"
+serverrole: []
+interfaces: []
+primary_if: []
+secondary_if: []
+primary_netmask: []
+secondary_netmask: []
+primary_ip: []
+secondary_ip: []
+gateway: []
+nameserver1: []
+nameserver2: []
+dc_fqdn: []
+dc_account: "Administrator"

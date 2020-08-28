@@ -1,0 +1,15 @@
+hostname: "master"
+windows_domain: "DATAPORT"
+serverrole: "domaincontroller_master"
+interfaces:
+  - eth0
+  - eth1
+primary_if: "eth0"
+secondary_if: "eth1"
+primary_ip: "10.10.128.13"
+primary_netmask: "255.255.255.0"
+secondary_ip: "85.215.236.87"
+secondary_netmask: "255.255.255.255"
+gateway: "10.10.10.128.1"
+nameserver1: "1.1.1.1"
+nameserver2: "8.8.8.8"

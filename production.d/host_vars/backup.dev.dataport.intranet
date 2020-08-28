@@ -1,0 +1,17 @@
+---
+hostname: "backup"
+windows_domain: "DATAPORT"
+serverrole: "domaincontroller_backup"
+interfaces:
+  - eth0
+  - eth1
+primary_if: "eth0"
+secondary_if: "eth1"
+primary_ip: "10.10.128.11"
+primary_netmask: "255.255.255.0"
+secondary_ip: "85.215.236.94"
+secondary_netmask: "255.255.255.255"
+nameserver1: "10.10.128.13"
+nameserver2: "1.1.1.1"
+gateway: "10.10.128.1"
+dc_fqdn: "master.dev.dataport.intranet"
